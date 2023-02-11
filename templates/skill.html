@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for candidate in data %}
+{% if skills in candidate["skills"].lower() %}
+<pre>
+    Имя кандидата - {{ candidate["name"] }}
+    Позиция кандидата - {{ candidate["position"] }}
+    Навыки через запятую - {{ candidate["skills"] }}
+</pre>
+{% endif %}
+{% endfor %}
+{% endblock %}

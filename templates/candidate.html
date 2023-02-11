@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for candidate in data %}
+{% if id == candidate["id"] %}
+<img src={{candidate["picture"]}}>
+<pre>
+            Имя кандидата - {{ candidate["name"] }}
+            Позиция кандидата - {{ candidate["position"] }}
+            Навыки через запятую - {{ candidate["skills"] }}
+        </pre>
+{% else %}
+{% endif %}
+{% endfor %}
+
+{% endblock %}
